@@ -4,6 +4,7 @@ export const addBooking = async (req, res, next) => {
     try {
         // Validate user inputs
         // Write todo to database
+        console.log("body-->",req.body)
         await BookingModel.create(req.body);
         // Respond to request
         res.status(201).json("Booking was added!");
